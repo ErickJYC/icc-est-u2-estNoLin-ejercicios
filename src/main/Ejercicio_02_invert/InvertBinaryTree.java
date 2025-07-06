@@ -20,5 +20,27 @@ public class InvertBinaryTree {
             preOrder(root.getRight());
         }
     }
+    public void ejecutar() {
+        Node root = construirArbol();
+        System.out.println("Árbol original (preorden):");
+        preOrder(root);
+        System.out.println();
+
+        Node inverted = invertTree(root);
+        System.out.println("Árbol invertido (preorden):");
+        preOrder(inverted);
+        System.out.println();
+    }
+    public Node construirArbol() {
+        Node root = new Node(4);
+        root.setLeft(new Node(2));
+        root.setRight(new Node(7));
+        root.getLeft().setLeft(new Node(1));
+        root.getLeft().setRight(new Node(3));
+        root.getRight().setLeft(new Node(6));
+        root.getRight().setRight(new Node(9));
+        return root;
+    }
+
 
 }

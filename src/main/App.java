@@ -7,6 +7,8 @@ import main.Ejercicio_04_depth.Depth;
 import main.Materia.Models.Node;
 import utils.StudentValidator;
 
+import java.util.List;
+
 public class App {
     public static void main(String[] args) throws Exception {
         // NO MODIFICAR ESTE CÓDIGO
@@ -18,60 +20,36 @@ public class App {
         System.out.println("----------Ejercicio 1----------\n");
         //Ejercicio 1
 
-        InsertBSTTest bst = new InsertBSTTest();
-        int[] values = {5, 3, 7, 2, 4, 6, 8};
-        Node root = null;
-        for (int val : values) {
-            root = bst.insert(root, val);
-        }
+        System.out.println("Ejercicio 1: Insertar en BST");
+        InsertBSTTest ejercicio1 = new InsertBSTTest();
+        ejercicio1.ejecutar();
 
-        System.out.println("Recorrido preorden del árbol BST:");
-        bst.preOrder(root);
+
         System.out.println("\n");
 
         // Ejercicio 2
         System.out.println("----------Ejercicio 2----------\n");
 
-        root.setLeft(new Node(2));
-        root.setRight(new Node(7));
-        root.getLeft().setLeft(new Node(1));
-        root.getLeft().setRight(new Node(3));
-        root.getRight().setLeft(new Node(6));
-        root.getRight().setRight(new Node(9));
+        System.out.println("\nEjercicio 2: Invertir árbol binario");
+        new InvertBinaryTree().ejecutar();
 
-        InvertBinaryTree inverter = new InvertBinaryTree();
-
-        System.out.println("Árbol original (preorden):");
-        inverter.preOrder(root);
-
-        Node inverted = inverter.invertTree(root);
-        System.out.println("\nÁrbol invertido (preorden):");
-        inverter.preOrder(inverted);
         System.out.println("\n");
+
 
 
         //Ejercicio 3
         System.out.println("----------Ejercicio 3----------\n");
 
-        ListLevels listador = new ListLevels();
-        var niveles = listador.listLevels(inverted);
+        System.out.println("\nEjercicio 3: Listar niveles del árbol original");
+        new ListLevels().ejecutar();
 
-        System.out.println("\nNiveles del árbol invertido:");
-        int nivel = 0;
-        for (var lista : niveles) {
-            System.out.print("Nivel " + nivel++ + ": ");
-            for (Node nodo : lista) {
-                System.out.print(nodo.getValue() + " ");
-            }
-            System.out.println();
-        }
         System.out.println("\n");
 
         //Ejercicio 4
         System.out.println("----------Ejercicio 4----------\n");
-        Depth depthCalc = new Depth();
-        int profundidad = depthCalc.maxDepth(inverted); // puedes usar root o inverted
-        System.out.println("Profundidad máxima del árbol invertido: " + profundidad);
+        System.out.println("\nEjercicio 4: Profundidad máxima del árbol");
+        new Depth().ejecutar();
+
     }
 
 }

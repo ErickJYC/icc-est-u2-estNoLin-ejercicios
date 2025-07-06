@@ -21,6 +21,16 @@ public class InsertBSTTest {
             preOrder(root.getRight());
         }
     }
+    public void ejecutar() {
+        int[] values = {5, 3, 7, 2, 4, 6, 8};
+        Node root = null;
+        for (int val : values) {
+            root = insert(root, val);
+        }
+        System.out.println("Recorrido preorden del árbol BST:");
+        preOrder(root);
+        System.out.println();
+    }
 
 }
 

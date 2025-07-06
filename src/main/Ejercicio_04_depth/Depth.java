@@ -8,6 +8,18 @@ public class Depth {
         if (root == null) return 0;
         return 1 + Math.max(maxDepth(root.getLeft()), maxDepth(root.getRight()));
     }
-
-
+    public void ejecutar() {
+        Node root = construirArbol();
+        int profundidad = maxDepth(root);
+        System.out.println("Profundidad: " + profundidad);
+    }
+    public Node construirArbol() {
+        Node root = new Node(4);
+        root.setLeft(new Node(2));
+        root.setRight(new Node(7));
+        root.getLeft().setLeft(new Node(1));
+        root.getLeft().setRight(new Node(3));
+        root.getLeft().getLeft().setLeft(new Node(8));
+        return root;
+    }
 }

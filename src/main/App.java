@@ -2,6 +2,7 @@ package main;
 
 import main.Ejercicio_01_insert.InsertBST;
 import main.Ejercicio_02_invert.InvertBinaryTree;
+import main.Ejercicio_03_listLeves.ListLevels;
 import utils.StudentValidator;
 import main.Materia.Models.Node;
 
@@ -45,6 +46,19 @@ public class App {
 
 
         //Ejercicio 3
+
+        ListLevels listador = new ListLevels();
+        var niveles = listador.listLevels(inverted);
+
+        System.out.println("\nNiveles del árbol invertido:");
+        int nivel = 0;
+        for (var lista : niveles) {
+            System.out.print("Nivel " + nivel++ + ": ");
+            for (Node nodo : lista) {
+                System.out.print(nodo.getValue() + " ");
+            }
+            System.out.println();
+        }
 
         //Ejercicio 4
     }

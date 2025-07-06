@@ -3,7 +3,6 @@ package test.Ejercicio_01_insert;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
-import main.Ejercicio_01_insert.InsertBST;
 import main.Materia.Models.Node;
 
 import org.junit.jupiter.api.Test;
@@ -12,7 +11,7 @@ public class InsertBSTTest {
 
     @Test
     public void bstInsertionTest() {
-        InsertBST bstInsertion = new InsertBST();
+        main.Ejercicio_01_insert.InsertBSTTest bstInsertion = new main.Ejercicio_01_insert.InsertBSTTest();
         /// LISTAOD // [5, 3, 7, 2, 4, 6, 8]
         /// // Creamos el nodo raíz
         Node root = null;

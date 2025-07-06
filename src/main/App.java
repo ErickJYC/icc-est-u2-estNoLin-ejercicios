@@ -1,11 +1,11 @@
 package main;
 
-import main.Ejercicio_01_insert.InsertBST;
+import main.Ejercicio_01_insert.InsertBSTTest;
 import main.Ejercicio_02_invert.InvertBinaryTree;
 import main.Ejercicio_03_listLeves.ListLevels;
 import main.Ejercicio_04_depth.Depth;
-import utils.StudentValidator;
 import main.Materia.Models.Node;
+import utils.StudentValidator;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -15,9 +15,10 @@ public class App {
         System.out.println("✉️  Correo: " + estudiante.correo());
         // NO MODIFICAR HASTA AQUÍ
 
+        System.out.println("----------Ejercicio 1----------\n");
         //Ejercicio 1
 
-        InsertBST bst = new InsertBST();
+        InsertBSTTest bst = new InsertBSTTest();
         int[] values = {5, 3, 7, 2, 4, 6, 8};
         Node root = null;
         for (int val : values) {
@@ -26,8 +27,10 @@ public class App {
 
         System.out.println("Recorrido preorden del árbol BST:");
         bst.preOrder(root);
+        System.out.println("\n");
 
         // Ejercicio 2
+        System.out.println("----------Ejercicio 2----------\n");
 
         root.setLeft(new Node(2));
         root.setRight(new Node(7));
@@ -44,9 +47,11 @@ public class App {
         Node inverted = inverter.invertTree(root);
         System.out.println("\nÁrbol invertido (preorden):");
         inverter.preOrder(inverted);
+        System.out.println("\n");
 
 
         //Ejercicio 3
+        System.out.println("----------Ejercicio 3----------\n");
 
         ListLevels listador = new ListLevels();
         var niveles = listador.listLevels(inverted);
@@ -60,12 +65,13 @@ public class App {
             }
             System.out.println();
         }
+        System.out.println("\n");
 
         //Ejercicio 4
-
+        System.out.println("----------Ejercicio 4----------\n");
         Depth depthCalc = new Depth();
         int profundidad = depthCalc.maxDepth(inverted); // puedes usar root o inverted
-        System.out.println("\nProfundidad máxima del árbol invertido: " + profundidad);
+        System.out.println("Profundidad máxima del árbol invertido: " + profundidad);
     }
 
 }

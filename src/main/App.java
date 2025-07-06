@@ -20,7 +20,7 @@ public class App {
         System.out.println("----------Ejercicio 1----------\n");
         //Ejercicio 1
 
-        System.out.println("Ejercicio 1: Insertar en BST");
+        System.out.println("\n Insertar en BST");
         InsertBSTTest ejercicio1 = new InsertBSTTest();
         ejercicio1.ejecutar();
 
@@ -30,7 +30,7 @@ public class App {
         // Ejercicio 2
         System.out.println("----------Ejercicio 2----------\n");
 
-        System.out.println("\nEjercicio 2: Invertir árbol binario");
+        System.out.println("\n Invertir árbol binario");
         new InvertBinaryTree().ejecutar();
 
         System.out.println("\n");
@@ -40,14 +40,14 @@ public class App {
         //Ejercicio 3
         System.out.println("----------Ejercicio 3----------\n");
 
-        System.out.println("\nEjercicio 3: Listar niveles del árbol original");
+        System.out.println("\n Listar niveles del árbol original");
         new ListLevels().ejecutar();
 
         System.out.println("\n");
 
         //Ejercicio 4
         System.out.println("----------Ejercicio 4----------\n");
-        System.out.println("\nEjercicio 4: Profundidad máxima del árbol");
+        System.out.println("\n Profundidad máxima del árbol");
         new Depth().ejecutar();
 
     }

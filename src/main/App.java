@@ -1,6 +1,7 @@
 package main;
 
 import main.Ejercicio_01_insert.InsertBST;
+import main.Ejercicio_02_invert.InvertBinaryTree;
 import utils.StudentValidator;
 import main.Materia.Models.Node;
 
@@ -12,6 +13,8 @@ public class App {
         System.out.println("✉️  Correo: " + estudiante.correo());
         // NO MODIFICAR HASTA AQUÍ
 
+        //Ejercicio 1
+
         InsertBST bst = new InsertBST();
         int[] values = {5, 3, 7, 2, 4, 6, 8};
         Node root = null;
@@ -21,6 +24,30 @@ public class App {
 
         System.out.println("Recorrido preorden del árbol BST:");
         bst.preOrder(root);
+
+        // Ejercicio 2
+
+        root.setLeft(new Node(2));
+        root.setRight(new Node(7));
+        root.getLeft().setLeft(new Node(1));
+        root.getLeft().setRight(new Node(3));
+        root.getRight().setLeft(new Node(6));
+        root.getRight().setRight(new Node(9));
+
+        InvertBinaryTree inverter = new InvertBinaryTree();
+
+        System.out.println("Árbol original (preorden):");
+        inverter.preOrder(root);
+
+        Node inverted = inverter.invertTree(root);
+        System.out.println("\nÁrbol invertido (preorden):");
+        inverter.preOrder(inverted);
+
+
+        //Ejercicio 3
+
+        //Ejercicio 4
     }
+
 }
 

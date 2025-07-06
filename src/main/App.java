@@ -3,6 +3,7 @@ package main;
 import main.Ejercicio_01_insert.InsertBST;
 import main.Ejercicio_02_invert.InvertBinaryTree;
 import main.Ejercicio_03_listLeves.ListLevels;
+import main.Ejercicio_04_depth.Depth;
 import utils.StudentValidator;
 import main.Materia.Models.Node;
 
@@ -61,6 +62,10 @@ public class App {
         }
 
         //Ejercicio 4
+
+        Depth depthCalc = new Depth();
+        int profundidad = depthCalc.maxDepth(inverted); // puedes usar root o inverted
+        System.out.println("\nProfundidad máxima del árbol invertido: " + profundidad);
     }
 
 }

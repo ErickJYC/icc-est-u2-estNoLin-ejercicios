@@ -1,72 +1,82 @@
-# 🌳 Estructuras de Árboles Binarios - Práctica de Programación
+# 🌲 Práctica de Árboles Binarios
 
-Este proyecto contiene la implementación de cuatro ejercicios relacionados con árboles binarios, desarrollados en Java. Cada ejercicio está encapsulado en su propia clase y puede ejecutarse directamente desde `App.java` mediante un método `ejecutar()`.
+Este proyecto contiene la solución a cuatro ejercicios fundamentales sobre árboles binarios, desarrollados en Java. Cada ejercicio está implementado en su propia clase y puede ejecutarse de forma independiente. El objetivo es comprender la estructura, manipulación y recorrido de árboles binarios mediante ejemplos prácticos.
 
 ---
 
-## 👤 Estudiante
+## 👨‍💻 Datos del Estudiante
 
 - **Nombre:** Erick Yunga
-- **Correo:** eyunga@est.ups.edu.ec
+- **Correo institucional:** eyunga@est.ups.edu.ec
+- **Carrera:** Computación
+- **Asignatura:** Estructura de Datos
+- **Fecha:** 07/06/2025
 
 ---
 
+## 📚 Ejercicios Desarrollados
+
+### 1️ Inserción en Árbol Binario de Búsqueda
+
+- **Clase:** `InsertBSTTest`
+- **Descripción:** Se insertan nodos en un árbol binario de búsqueda (BST) respetando su propiedad: los valores menores van a la izquierda y los mayores a la derecha.
+- **Implementación:** Se utiliza un método recursivo para ubicar cada nuevo nodo en su posición correcta.
+- **Salida esperada:**
+
+# ------EJERCICIO 1------
+- Raiz: 5
+- Hijo izquierda de la raíz: 3
+- Hijo derecha de la raíz: 7
+- Hijo izquierda del hijo izquierda: 2
+- Hijo derecha del hijo izquierda: 4
+- Hijo izquierda del hijo derecha: 6
+- Hijo derecha del hijo derecha: 8
+
 
 ---
 
-##  Ejercicios y cómo funciona cada uno
+### 2️ Inversión de Árbol Binario
 
-### 📌 Ejercicio 1: Insertar en un Árbol Binario de Búsqueda (BST)
+- **Clase:** `InvertBinaryTree`
+- **Descripción:** Se invierte un árbol binario, intercambiando los subárboles izquierdo y derecho de cada nodo.
+- **Implementación:** Se aplica recursión para recorrer el árbol y realizar los intercambios desde las hojas hacia la raíz.
+- **Salida esperada:**
 
-- **Clase:** `InsertBSTTest.java`
-- **Qué hace:** Inserta una secuencia de valores en un árbol binario de búsqueda.
-- **Cómo funciona:**
-    - Se recorre el árbol recursivamente.
-    - Si el valor es menor que el nodo actual, se inserta a la izquierda.
-    - Si es mayor, se inserta a la derecha.
-- **Resultado:** Se construye un BST con los valores `[5, 3, 7, 2, 4, 6, 8]` y se imprime su recorrido preorden:  
-  `5 3 2 4 7 6 8`
+# ------EJERCICIO 2------
+-  Raiz invertida: 4
+-  Hijo izq de la raíz invertida: 7
+-  Hijo der de la raíz invertida: 2
+-  Hijo izq del hijo izq invertido: 9
+-  Hijo der del hijo izq invertido: 6
+-  Hijo izq del hijo der invertido: 3
+-  Hijo der del hijo der invertido: 1
 
----
-
-### 📌 Ejercicio 2: Invertir un Árbol Binario
-
-- **Clase:** `InvertBinaryTree.java`
-- **Qué hace:** Invierte un árbol binario, intercambiando los hijos izquierdo y derecho de cada nodo.
-- **Cómo funciona:**
-    - Se aplica recursión postorden.
-    - En cada nodo, se invierten los subárboles izquierdo y derecho.
-- **Resultado:** Se imprime el recorrido preorden del árbol original y del árbol invertido.  
-  Ejemplo:  
-  Árbol original: `4 2 1 3 7 6 9`  
-  Árbol invertido: `4 7 9 6 2 3 1`
 
 ---
 
-### 📌 Ejercicio 3: Listar Niveles del Árbol
+### 3️ Listado de Niveles del Árbol
 
-- **Clase:** `ListLevels.java`
-- **Qué hace:** Agrupa los nodos del árbol por niveles y los imprime.
-- **Cómo funciona:**
-    - Se utiliza una cola (BFS) para recorrer el árbol nivel por nivel.
-    - Cada nivel se guarda como una lista de nodos.
-- **Resultado:** Se imprime cada nivel del árbol original.  
-  Ejemplo: 
-- `Nivel 0: 4` 
-- `Nivel 1: 2 7`
-- `Nivel 2: 1 3 6 9`
+- **Clase:** `ListLevels`
+- **Descripción:** Se recorre el árbol por niveles (BFS) y se imprime cada nivel en orden.
+- **Implementación:** Se utiliza una cola para recorrer el árbol nivel por nivel y agrupar los nodos.
+- **Salida esperada:**
+
+#  -----EJERCICIO 3------
+-  Nivel 0: 4 -
+-  Nivel 1: 2 - 7 -
+-  Nivel 2: 1 - 3 - 6 - 9 -
+
 
 ---
 
-### 📌 Ejercicio 4: Calcular la Profundidad Máxima
+### 4️ Cálculo de Profundidad Máxima
 
-- **Clase:** `Depth.java`
-- **Qué hace:** Calcula la profundidad máxima (altura) de un árbol binario.
-- **Cómo funciona:**
-- Se aplica recursión.
-- En cada nodo, se calcula la profundidad del subárbol izquierdo y derecho.
-- Se retorna el máximo de ambos más uno.
-- **Resultado:** Se imprime la profundidad del árbol.  
-  Ejemplo: `Profundidad: 4`
+- **Clase:** `Depth`
+- **Descripción:** Se calcula la profundidad máxima del árbol, es decir, el número de niveles desde la raíz hasta la hoja más profunda.
+- **Implementación:** Se aplica recursión para obtener la profundidad de cada subárbol y se retorna el valor máximo.
+- **Salida esperada:**
 
- 
+# -----EJERCICIO 4------
+- Profundidad máxima: 3 
+
+

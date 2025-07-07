@@ -24,6 +24,5 @@ public class InsertBSTTest {
         System.out.println("Hijo izquierda del hijo derecho: " + root.getRight().getLeft().getValue());
         System.out.println("Hijo derecho del hijo derecho: " + root.getRight().getRight().getValue());
     }
-
 }
 
